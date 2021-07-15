@@ -21,7 +21,7 @@ const Header = () => {
         <p>All the latest reviews of the games you love the most</p>
       </div>
       <nav>
-        <p>All Reviews</p>
+        <p>Reviews</p>
         <div className="status-online">
           <p>{user.username}</p>
           <div className="online">

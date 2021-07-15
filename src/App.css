@@ -8,12 +8,7 @@
 } */
 
 header {
-  background: linear-gradient(
-    89.04deg,
-    #101935 0%,
-    #8360c3 28.95%,
-    #2ebf91 98.04%
-  );
+  background: linear-gradient(89.04deg, #101935 0%, #354476 98.04%);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -28,7 +23,8 @@ header {
 }
 
 .Header-title h1 {
-  margin-bottom: 10px;
+  color: #4cfac3;
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.25);
 }
 
 header nav {
@@ -123,6 +119,9 @@ nav img {
 .sign-in select {
   margin-bottom: 30px;
   width: 230px;
+  box-shadow: 0px 2px 4px 3px rgba(38, 38, 38, 0.25);
+  border: none;
+  appearance: none;
 }
 
 .sign-in form button {
@@ -132,6 +131,9 @@ nav img {
   box-shadow: 0px 2px 4px 3px rgba(38, 38, 38, 0.25);
   cursor: pointer;
   transition: transform 0.3s ease;
+  background: linear-gradient(85.58deg, #131c3a -28.1%, #3d508d 91.74%);
+  color: #fff;
+  font-weight: 600;
 }
 
 .sign-in form button:hover {
@@ -149,4 +151,84 @@ nav img {
 
 .latest-reviews h2 {
   margin: 30px 0 30px 0;
+}
+
+.reviews-title {
+  text-align: center;
+  padding: 30px 90px;
+}
+
+.reviews-all {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.review-block {
+  margin: 15px;
+  width: 350px;
+  height: 170px;
+  padding: 15px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.review-block-title {
+  position: absolute;
+  top: 15px;
+  transform: translateY(-100px);
+  transition: transform 0.5s ease-in-out;
+  color: #fff;
+}
+
+.review-block-title h3 {
+  color: #4cfac3;
+}
+
+.review-block:hover > .review-block-title {
+  transform: translateY(-5px);
+}
+
+.review-block-title h3 {
+  font-size: 22px;
+}
+
+.review-block-title p {
+  font-size: 14px;
+}
+
+.review-heart {
+  position: absolute;
+  bottom: 15px;
+}
+
+.review-comments {
+  position: absolute;
+  bottom: 15px;
+  left: 50px;
+}
+
+.review-arrow {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}
+
+.review-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(16, 25, 53, 0.85);
+  width: 120%;
+  height: 120%;
+  opacity: 0;
+  transition: opacity 0.7s ease-in-out;
+}
+
+.review-overlay:hover {
+  opacity: 1;
 }
