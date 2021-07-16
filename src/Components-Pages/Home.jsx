@@ -4,11 +4,10 @@ import { useEffect, useState } from 'react';
 import heart from '../Images/heart-icon.svg';
 import arrow from '../Images/forward-arrow-icon.svg';
 import comments from '../Images/message-icon.svg';
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const [reviews, setReviews] = useState([]);
-  const { review_id } = useParams();
 
   useEffect(() => {
     return fetchReviews().then((response) => {
@@ -26,7 +25,7 @@ const Home = () => {
       <section className="reviews-all">
         {reviews.map((review) => {
           return (
-            <Link to={`/reviews/${review_id}`} key={review.review_id}>
+            <Link to={`/reviews/${review.review_id}`} key={review.review_id}>
               <div
                 className="review-block"
                 style={{
