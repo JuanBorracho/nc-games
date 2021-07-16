@@ -37,6 +37,7 @@ header nav {
 
 header nav p {
   margin-right: 30px;
+  color: #fff;
 }
 
 .online {
@@ -163,7 +164,7 @@ nav img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 1260px;
+  max-width: 1360px;
   margin: 0 auto;
   padding: 30px 20px;
 }

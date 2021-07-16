@@ -1,6 +1,7 @@
 import { useContext, useEffect } from 'react';
 import { UserContext } from '../Utils/User';
 import { fetchUserByUsername } from '../Utils/apis';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const { user, setUser } = useContext(UserContext);
@@ -17,11 +18,16 @@ const Header = () => {
   return (
     <header>
       <div className="Header-title">
-        <h1>NC Game Reviews</h1>
+        <Link to={'/'}>
+          <h1>NC Game Reviews</h1>
+        </Link>
         <p>All the latest reviews of the games you love the most</p>
       </div>
+
       <nav>
-        <p>Reviews</p>
+        <Link to={'/'}>
+          <p>Reviews</p>
+        </Link>
         <div className="status-online">
           <p>{user.username}</p>
           <div className="online">
