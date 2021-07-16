@@ -232,3 +232,10 @@ nav img {
 .review-overlay:hover {
   opacity: 1;
 }
+
+footer {
+  background: linear-gradient(89.04deg, #101935 0%, #354476 98.04%);
+  color: #fff;
+  text-align: center;
+  padding: 30px 0 30px 0;
+}

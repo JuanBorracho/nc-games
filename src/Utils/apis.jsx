@@ -15,3 +15,13 @@ export const fetchReviews = () => {
       return response.data.reviews;
     });
 };
+
+export const fetchReviewById = (review_id) => {
+  return axios.get(
+    `https://my-nc-games-frontend-app.herokuapp.com/api/reviews/${review_id}`.then(
+      (response) => {
+        return response.data.review;
+      }
+    )
+  );
+};
