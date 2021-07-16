@@ -12,7 +12,6 @@ const Home = () => {
   useEffect(() => {
     return fetchReviews().then((response) => {
       setReviews(response);
-      console.log(response);
     });
   }, []);
 
@@ -40,7 +39,9 @@ const Home = () => {
                     {review.owner} | {review.created_at}
                   </p>
                 </div>
+                <p className="review-votes">{review.votes}</p>
                 <img src={heart} alt="" className="review-heart"></img>
+                <p className="review-comment-count">{review.comment_count}</p>
                 <img src={comments} alt="" className="review-comments"></img>
                 <img src={arrow} alt="" className="review-arrow"></img>
               </div>

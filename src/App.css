@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  text-decoration: none;
 }
 
 /* .App {
@@ -216,6 +217,24 @@ nav img {
   position: absolute;
   right: 15px;
   bottom: 15px;
+}
+
+.review-votes {
+  position: absolute;
+  bottom: 38px;
+  left: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.review-comment-count {
+  position: absolute;
+  bottom: 39px;
+  left: 58px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
 }
 
 .review-overlay {

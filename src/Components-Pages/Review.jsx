@@ -17,8 +17,10 @@ const Review = () => {
   return (
     <div>
       <Header />
-      <section className="review-item">
+      <section className="review-item-title">
+        <p>{currentReview.category}</p>
         <h1>{currentReview.title}</h1>
+        <p>Review by {currentReview.owner}</p>
       </section>
     </div>
   );
