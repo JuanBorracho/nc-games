@@ -21,6 +21,17 @@ const Review = () => {
         <p>{currentReview.category}</p>
         <h1>{currentReview.title}</h1>
         <p>Review by {currentReview.owner}</p>
+        <img
+          className="review-item-img"
+          alt={currentReview.title}
+          src={currentReview.review_img_url}
+        ></img>
+      </section>
+      <section className="review-item-body">
+        <p>{currentReview.review_body}</p>
+      </section>
+      <section className="review-item-comments">
+        <p>comments</p>
       </section>
     </div>
   );
