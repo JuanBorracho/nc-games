@@ -2,6 +2,7 @@ import { useContext, useEffect } from 'react';
 import { UserContext } from '../Utils/User';
 import { fetchUserByUsername } from '../Utils/apis';
 import { Link } from 'react-router-dom';
+import mobileMenu from '../Images/mobile-menu-button.png';
 
 const Header = () => {
   const { user, setUser } = useContext(UserContext);
@@ -17,6 +18,9 @@ const Header = () => {
 
   return (
     <header>
+      <div className="mobile-menu none">
+        <img src={mobileMenu} alt="mobile-menu-button"></img>
+      </div>
       <div className="Header-title">
         <Link to={'/'}>
           <h1>NC Game Reviews</h1>
@@ -28,6 +32,7 @@ const Header = () => {
         <Link to={'/'}>
           <p>Reviews</p>
         </Link>
+        <p>Categories</p>
         <div className="status-online">
           <p>{user.username}</p>
           <div className="online">

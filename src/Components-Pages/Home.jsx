@@ -5,6 +5,7 @@ import heart from '../Images/heart-icon.svg';
 import arrow from '../Images/forward-arrow-icon.svg';
 import comments from '../Images/message-icon.svg';
 import { Link } from 'react-router-dom';
+import moment from 'moment';
 
 const Home = () => {
   const [reviews, setReviews] = useState([]);
@@ -36,7 +37,8 @@ const Home = () => {
                 <div className="review-block-title">
                   <h3>{review.title}</h3>
                   <p>
-                    {review.owner} | {review.created_at}
+                    {review.owner} |{' '}
+                    {moment(review.created_at).format('Do MMM YY')}
                   </p>
                 </div>
                 <p className="review-votes">{review.votes}</p>

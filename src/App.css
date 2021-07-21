@@ -3,10 +3,26 @@
   text-decoration: none;
 }
 
-/* .App {
-  font-family: 'Kanit', sans-serif;
-  font-family: 'Open Sans', sans-serif;
-} */
+.App {
+  display: grid;
+  grid-template-rows: auto min-content;
+  min-height: 100vh;
+}
+
+.none {
+  display: none;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 45px;
+  right: 30px;
+}
+
+.mobile-menu img {
+  max-width: 30px;
+  max-height: 30px;
+}
 
 header {
   background: linear-gradient(89.04deg, #101935 0%, #354476 98.04%);
@@ -281,4 +297,20 @@ footer {
   max-width: 860px;
   margin: 0 auto;
   padding: 30px 20px;
+}
+
+@media (max-width: 900px) {
+  header {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Header-title {
+    text-align: center;
+    margin: 0;
+  }
+
+  header nav {
+    display: none;
+  }
 }
